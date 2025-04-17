@@ -605,15 +605,16 @@ export default function AboutUs() {
                 </div>
 
                 <div className="pt-3">
-                  <button
-                    type="submit"
-                    className="w-full inline-e-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-white bg-[#ff5a1f] hover:bg-[#e04e18] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1abc9c] focus:ring-offset-2 dark:focus:ring-offset-gray-800"
-                    aria-label="Send message"
-                  >
-                    Send Message{" "}
-                    <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
-                  </button>
-                </div>
+  <button
+    type="submit"
+    className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold text-white bg-[#ff5a1f] hover:bg-[#e04e18] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#1abc9c] focus:ring-offset-2 dark:focus:ring-offset-gray-800 shadow-sm hover:shadow-md active:scale-[0.98]"
+    aria-label="Send message"
+  >
+    <span>Send Message</span>
+    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+  </button>
+</div>
+
               </form>
             )}
           </div>
