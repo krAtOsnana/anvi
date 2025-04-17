@@ -376,11 +376,11 @@ export default function AboutUs() {
             </p>
           </div>
 
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
+          <div className="mb-16">
+            <h2 className="text-3xl font-extrabold mb-8 text-gray-900 dark:text-white tracking-tight">
               Avni Software
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
                   title: "Source code",
@@ -457,20 +457,20 @@ export default function AboutUs() {
                 <a
                   key={index}
                   href={item.link}
-                  className="flex flex-col p-4 rounded-lg border border-gray-100 dark:border-gray-700 hover:border-[#1abc9c] dark:hover:border-[#1abc9c] hover:bg-[#f8f9fa] dark:hover:bg-gray-800 transition-all group"
+                  className="flex flex-col p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-[#1abc9c] dark:hover:border-[#1abc9c] hover:bg-[#f8f9fa] dark:hover:bg-gray-800 transition-all group"
                   aria-label={`${item.title} - ${item.description}`}
                 >
-                  <div className="flex items-center mb-2">
+                  <div className="flex items-center mb-3">
                     <div className="w-10 h-10 rounded-full bg-[#e9f7f4] dark:bg-gray-700 flex items-center justify-center mr-4 group-hover:bg-[#1abc9c] transition-colors">
                       <span className="text-[#1abc9c] group-hover:text-white transition-colors">
                         {item.icon}
                       </span>
                     </div>
-                    <span className="text-gray-800 dark:text-gray-200 font-medium group-hover:text-gray-900 dark:group-hover:text-white">
+                    <span className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-[#1abc9c] transition-colors">
                       {item.title}
                     </span>
                   </div>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm ml-14">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed ml-14">
                     {item.description}
                   </p>
                 </a>
@@ -478,26 +478,26 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
+          <div className="mb-16">
+            <h2 className="text-3xl font-extrabold mb-8 text-gray-900 dark:text-white tracking-tight">
               Credits
             </h2>
             <a
               href="#"
-              className="flex flex-col p-4 rounded-lg border border-gray-100 dark:border-gray-700 hover:border-[#1abc9c] dark:hover:border-[#1abc9c] hover:bg-[#f8f9fa] dark:hover:bg-gray-800 transition-all group max-w-md"
+              className="flex flex-col p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-[#1abc9c] dark:hover:border-[#1abc9c] hover:bg-[#f8f9fa] dark:hover:bg-gray-800 transition-all group max-w-md"
               aria-label="Lokalise, translation service - Tools that help with multilingual support"
             >
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-3">
                 <div className="w-10 h-10 rounded-full bg-[#e9f7f4] dark:bg-gray-700 flex items-center justify-center mr-4 group-hover:bg-[#1abc9c] transition-colors">
                   <span className="text-[#1abc9c] group-hover:text-white transition-colors">
                     <ExternalLink className="w-5 h-5" />
                   </span>
                 </div>
-                <span className="text-gray-800 dark:text-gray-200 font-medium group-hover:text-gray-900 dark:group-hover:text-white">
+                <span className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-[#1abc9c] transition-colors">
                   Lokalise, translation service
                 </span>
               </div>
-              <p className="text-gray-600 dark:text-gray-400 text-sm ml-14">
+              <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed ml-14">
                 Tools that help with multilingual support
               </p>
             </a>
