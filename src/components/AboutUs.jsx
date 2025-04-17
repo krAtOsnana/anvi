@@ -274,10 +274,44 @@ export default function AboutUs() {
         </div>
 
         {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-[#1abc9c] opacity-5 rounded-full"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#ff5a1f] opacity-5 rounded-full"></div>
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none group">
+          {/* Green Floating Bubble */}
+          <div
+            className="absolute top-20 left-10 w-64 h-64 bg-[#1abc9c] opacity-10 rounded-full transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:blur-md group-hover:opacity-20"
+            style={{ animation: "floatAnim 6s ease-in-out infinite" }}
+          />
+
+          {/* Orange Pulsing & Rotating Bubble */}
+          <div
+            className="absolute bottom-10 right-10 w-96 h-96 bg-[#ff5a1f] opacity-10 rounded-full transition-transform duration-500 ease-in-out group-hover:scale-105 group-hover:rotate-6 group-hover:opacity-20"
+            style={{ animation: "pulseAnim 8s ease-in-out infinite" }}
+          />
         </div>
+
+        {/* Inline Keyframe Styles */}
+        <style jsx>{`
+          @keyframes floatAnim {
+            0%,
+            100% {
+              transform: translateY(0px);
+            }
+            50% {
+              transform: translateY(-20px);
+            }
+          }
+
+          @keyframes pulseAnim {
+            0%,
+            100% {
+              transform: scale(1);
+              opacity: 0.1;
+            }
+            50% {
+              transform: scale(1.05);
+              opacity: 0.15;
+            }
+          }
+        `}</style>
       </section>
 
       {/* About Content */}
@@ -605,16 +639,18 @@ export default function AboutUs() {
                 </div>
 
                 <div className="pt-3">
-  <button
-    type="submit"
-    className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold text-white bg-[#ff5a1f] hover:bg-[#e04e18] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#1abc9c] focus:ring-offset-2 dark:focus:ring-offset-gray-800 shadow-sm hover:shadow-md active:scale-[0.98]"
-    aria-label="Send message"
-  >
-    <span>Send Message</span>
-    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-  </button>
-</div>
-
+                  <button
+                    type="submit"
+                    className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold text-white bg-[#ff5a1f] hover:bg-[#e04e18] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#1abc9c] focus:ring-offset-2 dark:focus:ring-offset-gray-800 shadow-sm hover:shadow-md active:scale-[0.98]"
+                    aria-label="Send message"
+                  >
+                    <span>Send Message</span>
+                    <ArrowRight
+                      className="w-5 h-5 transition-transform group-hover:translate-x-1"
+                      aria-hidden="true"
+                    />
+                  </button>
+                </div>
               </form>
             )}
           </div>
